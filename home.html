@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fitness</title>
+        <link rel="stylesheet" href="">
+        <script src="https://kit.fontawesome.com/44a7a5d7d1.js" crossorigin="anonymous"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+            @media(max-width: 767px) {
+                .footer-col {
+                    width: 50%;
+                    margin-bottom: 30px;
+                }
+            }
+            @media(max-width: 574px) {
+                .footer-col {
+                    width: 100%;
+                }
+
+                div.cc {
+                    width: 1000px;
+                    border: 1px solid white;
+                }
+
+                header {
+                    position: fixed;
+                    display: flex;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    justify-content: space-between;
+                    align-items: center;
+                    transition: 0.6s;
+                    padding: 40px 0px;
+                    z-index: 2;
+                    border: 1px solid red;
+                }
+            }
+
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: Oswald;
+                scroll-behavior: smooth;
+                transition: 0.6s;
+            }
+
+            div.con1 {
+                background-image: url("gog1.png");
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-blend-mode: lighten;
+                background-position: center;
+                background-color: hsla(0, 0%, 69%, 0.1);
+                border: 1px solid black;
+            }
+
+            header {
+                position: fixed;
+                display: flex;
+                top: 0;
+                left: 0;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                transition: 0.6s;
+                padding: 40px 100px;
+                z-index: 2;
+            }
+
+            .logo {
+                position: relative;
+                font-weight: 700px;
+                text-decoration: none;
+                color: white;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                transition: 0.6s;
+                font-size: 40px;
+                margin-left: 50px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+
+            header ul {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+            }
+
+            header ul li {
+                position: relative;
+                list-style: none;
+
+            }
+
+            header ul li a {
+                text-decoration: none;
+                position: relative;
+                color: white;
+                margin: 0 15px;
+                letter-spacing: 2px;
+                font-weight: 500px;
+                font-size: 25px;
+                transition: 0.6s;
+            }
+
+            header ul li a:hover {
+                color: black;
+            }
+
+            .bg {
+                background-image: url("background.jpg");
+                background-size: cover;
+                position: relative;
+                width: 100%;
+                height: 100vh;
+            }
+
+            header.sticky {
+                padding: 5px 100px;
+                background-color: white;
+            }
+
+            header.sticky ul li a {
+                color: black;
+            }
+
+            header.sticky ul li a:hover {
+                color: lightgray;
+            }
+
+            header.sticky .logo {
+                color: black;
+            }
+
+            div.welcome {
+                font-family: Oswald;
+                text-align: center;
+                color: white;
+                margin-left: 400px;
+                width: 60%;
+                padding: 70px;
+                font-size: 50px;
+                display: inline-block;
+            }
+
+            p.para1 {
+                font-size: 30px;
+            }
+
+            div.body1 {
+                width: 100%;
+                height: auto;
+                background-color: rgb(53, 53, 53);
+            }
+
+            div.body2 {
+                width: 100%;
+                background: #333;
+            }
+
+            div.container {
+                background-image: url("bg.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                padding: 100px 40px;
+                text-align: center;
+                color: white;
+            }
+
+            .container p {
+                margin: 40px auto;
+                font-size: 30px;
+            }
+
+            .email-box {
+                height: 40px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .email-box i {
+                background: #2f3542;
+                width: 40px;
+                line-height: 40px;
+            }
+
+            .mail,
+            .sub {
+                outline: none;
+                border: none;
+                font-size: 20px;
+            }
+
+            .mail {
+                width: 0;
+                transition: 0.6s;
+
+            }
+
+            .email-box:hover > .mail,
+            .mail:focus {
+                width: 300px;
+                padding: 0 15px;
+            }
+
+            .sub {
+                background: #2f3542;
+                color: white;
+                padding: 0 15px;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+
+            div.footer {
+                width: 100%;
+                height: 200px;
+                background-color: rgb(53, 53, 53);
+                border: 3px solid white;
+            }
+
+            button.start {
+                width: 250px;
+                height: 70px;
+                font-size: 30px;
+                background-color: rgba(255, 255, 255, 0);
+                border: 3px solid white;
+                color: white;
+                cursor: pointer;
+                transition: 0.6s;
+            }
+
+            button.start:hover {
+                background-color: rgba(0, 0, 0, 0.301);
+            }
+
+            .start a {
+                text-decoration: none;
+                color: white;
+            }
+
+            .start a:hover {
+                color: blue;
+            }
+
+            div.about {
+                width: 40%;
+                display: inline-block;
+                margin-left: 150px;
+                padding: 25px;
+            }
+
+            div.image {
+                width: 700px;
+                height: 500px;
+                margin-left: 150px;
+                display: inline-block;
+                background-image: url("fit.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            button.lm {
+                color: #E34234;
+                background-color: rgb(53, 53, 53);
+                border: none;
+                cursor: pointer;
+                font-size: 30px;
+                transition: 0.6s;
+            }
+
+            button.lm:hover {
+                color: #973127;
+            }
+
+            div.plan {
+                margin: 0 auto;
+            }
+
+            div.box2 {
+                border: 3px solid white;
+                padding: 25px;
+                width: 85%;
+                margin-left: 150px;
+            }
+
+            div.line {
+                border: 1px solid black;
+            }
+
+            div.ref {
+                border: 1px solid grey;
+                height: 200px;
+                overflow: scroll;
+                border-radius: 30px;
+            }
+
+            div.box3 {
+                display: flex;
+                margin: 0 auto;
+                border: 1px solid white;
+                width: 250px;
+                justify-content: space-between;
+            }
+
+            div.box3 > div {
+                padding: 10px;
+                cursor: pointer;
+                transition: 0.6s;
+            }
+
+            div.box3 > div:hover {
+                scale: 130%;
+            }
+
+            div.box4 {
+                border: 1px solid white;
+                display: flex;
+                text-align: center;
+                width: 40%;
+                margin: 0 auto;
+                color: white;
+            }
+
+            div.l1 {
+                margin: 0 auto;
+            }
+
+            div.three {
+                width: 90%;
+                margin: 0 auto;
+                display: flex;
+                padding: 20px;
+                justify-content: space-between;
+                position: relative;
+            }
+
+            div.three > div {
+                width: 520px;
+                height: 300px;
+                box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgb(0, 0, 0);
+            }
+
+            div.wl {
+                position: relative;
+                background-image: url("wl.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                cursor: pointer;
+                background-blend-mode: darken;
+                background-color: transparent;
+            }
+
+            div.wg {
+                position: relative;
+                background-image: url("wg.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                cursor: pointer;
+                background-blend-mode: darken;
+                background-color: transparent;
+            }
+
+            div.bd {
+                position: relative;
+                background-image: url("bd.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                cursor: pointer;
+                background-blend-mode: darken;
+                background-color: transparent;
+            }
+
+            div.wl h3 {
+                color: white;
+                font-size: 30px;
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                left: 40%;
+                opacity: 0;
+            }
+
+            div.wg h3 {
+                color: white;
+                font-size: 30px;
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                left: 40%;
+                opacity: 0;
+            }
+
+            div.bd h3 {
+                color: white;
+                font-size: 30px;
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                left: 40%;
+                opacity: 0;
+            }
+
+            div.wl:hover {
+                background-blend-mode: darken;
+                background-color: hsla(218, 14%, 11%, 0.6);
+            }
+
+            div.wg:hover {
+                background-blend-mode: darken;
+                background-color: hsla(218, 14%, 11%, 0.6);
+            }
+
+            div.bd:hover {
+                background-blend-mode: darken;
+                background-color: hsla(218, 14%, 11%, 0.6);
+            }
+
+            div.wl:hover h3 {
+                bottom: 40%;
+                opacity: 1;
+            }
+
+            div.wg:hover h3 {
+                bottom: 40%;
+                opacity: 1;
+            }
+
+            div.bd:hover h3 {
+                bottom: 40%;
+                opacity: 1;
+            }
+
+            div.text1 {
+                width: 78%;
+                margin: 0 auto;
+                display: flex;
+                padding: 0 20px 20px;
+                justify-content: space-between;
+                text-align: center;
+                color: white;
+            }
+
+            div.text1 h3 {
+                cursor: pointer;
+            }
+
+            div.text1 h3:hover {
+                color: darkgray;
+            }
+
+            div.fv {
+                position: relative;
+                background-image: url("veg.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                cursor: pointer;
+                background-blend-mode: darken;
+                background-color: transparent;
+            }
+
+            div.meat {
+                position: relative;
+                background-image: url("meat.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                cursor: pointer;
+                background-blend-mode: darken;
+                background-color: transparent;
+            }
+
+            div.carb {
+                position: relative;
+                background-image: url("carb.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                cursor: pointer;
+                background-blend-mode: darken;
+                background-color: transparent;
+            }
+
+            div.fv h3 {
+                color: white;
+                font-size: 30px;
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                left: 30%;
+                opacity: 0;
+            }
+
+            div.meat h3 {
+                color: white;
+                font-size: 30px;
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                left: 45%;
+                opacity: 0;
+            }
+
+            div.carb h3 {
+                color: white;
+                font-size: 30px;
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                left: 40%;
+                opacity: 0;
+            }
+
+            div.fv:hover {
+                background-blend-mode: darken;
+                background-color: hsla(218, 14%, 11%, 0.6);
+            }
+
+            div.meat:hover {
+                background-blend-mode: darken;
+                background-color: hsla(218, 14%, 11%, 0.6);
+            }
+
+            div.carb:hover {
+                background-blend-mode: darken;
+                background-color: hsla(218, 14%, 11%, 0.6);
+            }
+
+            div.fv:hover h3 {
+                bottom: 40%;
+                opacity: 1;
+            }
+
+            div.meat:hover h3 {
+                bottom: 40%;
+                opacity: 1;
+            }
+
+            div.carb:hover h3 {
+                bottom: 40%;
+                opacity: 1;
+            }
+
+            .foot {
+                border: 1px solid white;
+                width: 120px;
+                text-decoration: none;
+            }
+
+            .foot1 {
+                background-color: rgb(53, 53, 53);
+                padding: 70px 0;
+            }
+
+            .container1 {
+                max-width: 1170px;
+                margin: auto;
+                background-color: rgb(53, 53, 53);
+            }
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            .footer-col {
+                width: 25%;
+                padding: 0 15px;
+            }
+
+            .footer-col h4 {
+                font-size: 25px;
+                color: white;
+                margin-bottom: 30px;
+                font-weight: 500;
+                position: relative;
+
+            }
+
+            .footer-col h4::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                background-color: #e91e63;
+                height: 2px;
+                box-sizing: border-box;
+                width: 50px;
+            }
+
+            .footer-col ul li:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            .footer-col ul li a {
+                font-size: 20px;
+                color: #ffffff;
+                text-decoration: none;
+                font-weight: 300;
+                color: #bbbbbb;
+                display: block;
+                transition: all 0.3s ease;
+            }
+
+            .footer-col ul li a:hover {
+                color: #ffffff;
+                padding-left: 8px;
+            }
+
+            .footer-col .socials a {
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                background-color: rgba(255,255,255,0.2);
+                margin: 0 10px 10px 0;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 50%;
+                color: #ffffff;
+                transition: all 0.5s ease;
+            }
+
+            .footer-col .socials a:hover {
+                color: #24262b;
+                background-color: #ffffff;
+            }
+
+            div.cc {
+                width: 33%;
+                padding: 0 15px;
+                margin-top: 60px;
+                color: rgba(255, 255, 255, 0.685);
+                text-decoration: none;
+            }
+
+            div.cc a {
+                text-decoration: none;
+                color: rgba(255, 255, 255, 0.685);
+            }
+
+            div.cc a:hover {
+                color: rgb(111, 50, 190);
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="head">
+            <a href="home.html" class="logo">Fitness</a>
+            <ul>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="C:/Users/Dragon/Documents/CSS/PBL/About Us/about.html">About</a>
+                </li>
+                <li>
+                    <a href="file:///C:/Users/Dragon/Documents/CSS/PBL/Contact/contact.html">Contact</a>
+                </li>
+            </ul>
+        </header>
+        <script>
+            window.addEventListener("scroll", function () {
+                var header = document.querySelector("header");
+                header
+                    .classList
+                    .toggle("sticky", window.scrollY > 0);
+            })
+        </script>
+        <div class="con1" id="container">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div id="header" class="welcome">
+                <h1>WELCOME!</h1>
+                <p class="para1">Get fit and active today right from your homes! Follow along
+                    our workout session and start shaping your ideal body today...</p>
+                <br>
+                <a href="#session">
+                    <button class="start">START SESSION</button>
+                </a>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="body1" id="session">
+            <br>
+            <br>
+            <br>
+            <div class="box1">
+                <br>
+                <div class="plan" style="text-align: center; width: 300px;">
+                    <h1 style="color: white; font-size: 50px;">Choose Your Plan</h1>
+                </div>
+                <br>
+                <div class="three">
+                    <div class="wl">
+                        <a href="#">
+                            <h3>Weight Loss</h3>
+                        </a>
+                    </div>
+                    <div class="wg">
+                        <a href="file:///C:/Users/Dragon/Documents/CSS/PBL/Weight_Gain/wg.html">
+                            <h3>Weight Gain</h3>
+                        </a>
+                    </div>
+                    <div class="bd">
+                        <a href="#">
+                            <h3>Bodybuilding</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="text1">
+                    <h3>Tips and workout plan to help you lose weight</h3>
+                    <h3>Fitness plan for those who want to gain weight</h3>
+                    <h3>Muscle development and weightlifting</h3>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="plan" style="text-align: center; width: 400px;">
+                <h1 style="color: white; font-size: 50px;">Calories and Nutrition</h1>
+            </div>
+            <br>
+            <div class="three">
+                <div class="fv">
+                    <a href="file:///C:/Users/Dragon/Documents/CSS/PBL/Veg/veg.html">
+                        <h3>Fruits and Vegetables</h3>
+                    </a>
+                </div>
+                <div class="meat">
+                    <a href="file:///C:/Users/Dragon/Documents/CSS/PBL/Meat/meat.html">
+                        <h3>Meat</h3>
+                    </a>
+                </div>
+                <div class="carb">
+                    <a href="file:///C:/Users/Dragon/Documents/CSS/PBL/Carb/carb.html">
+                        <h3>Carbohydrates</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="text1">
+                <h3>Good source of vitamins and minerals</h3>
+                <h3>Excellent source of protein and fat content</h3>
+                <h3>Rich in fibers, sugars and starches</h3>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+    <div class="body2">
+        <div class="container">
+            <form action="">
+                <h1 style="font-size: 50px;">Join Our Newsletter</h1>
+                <p>Subscribe to our newsletter and stay up-to-date for free!</p>
+                <div class="email-box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input class="mail" type="email" name="" id="" placeholder="Enter your email">
+                    <button class="sub">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer class="foot1">
+        <div class="container1">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Fitness Plans</h4>
+                    <ul>
+                        <li>
+                            <a href="#">Weight Loss</a>
+                        </li>
+                        <li>
+                            <a href="file:///C:/Users/Dragon/Documents/CSS/PBL/Weight_Gain/wg.html">Weight Gain</a>
+                        </li>
+                        <li>
+                            <a href="#">Bodybuilding</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Diet and Nutrition</h4>
+                    <ul>
+                        <li>
+                            <a href="file:///C:/Users/Dragon/Documents/CSS/PBL/Veg/veg.html">Fruits and Vegetables</a>
+                        </li>
+                        <li>
+                            <a href="file:///C:/Users/Dragon/Documents/CSS/PBL/Meat/meat.html">Meat</a>
+                        </li>
+                        <li>
+                            <a href="file:///C:/Users/Dragon/Documents/CSS/PBL/Carb/carb.html">Carbohydrates</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Team</h4>
+                    <ul>
+                        <li>
+                            <a href="C:/Users/Dragon/Documents/CSS/PBL/About Us/about.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="file:///C:/Users/Dragon/Documents/CSS/PBL/Contact/contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="socials">
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container1">
+            <div class="row">
+                <div class="cc">
+                    <ul>
+                        <li>
+                            <a href="#">© Copyright 2022 by Fitness.Inc.</a>
+                            All rights reserved.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

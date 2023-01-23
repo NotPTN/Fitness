@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us</title>
+        <link rel="stylesheet" href="">
+        <script src="https://kit.fontawesome.com/44a7a5d7d1.js" crossorigin="anonymous"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: Oswald;
+                scroll-behavior: smooth;
+            }
+
+            div.con1 {
+                background-image: url("blue.png");
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-blend-mode: lighten;
+                background-position: center;
+                display: grid;
+                place-items: center;
+            }
+
+            .card1 {
+                box-shadow: 5px 10px 18px #000000;
+                width: 80%;
+                max-width: 600px;
+                display: flex;
+                flex-direction: column;
+                background-color: rgb(53, 53, 53);
+                color: white;
+                text-align: center;
+                padding: 2em;
+                margin-top: 100px;
+            }
+
+            .profile-name {
+                font-size: 2rem;
+            }
+
+            .profile-name::after {
+                content: '';
+                display: block;
+                background-color: white;
+                opacity: 0.3;
+                width: 3em;
+                height: 1px;
+                margin: 0.7em auto 0.5em;
+            }
+
+            .profile-position {
+                margin: 0;
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                letter-spacing: 3px;
+                margin-bottom: 1.5em;
+                opacity: 0.7;
+            }
+
+            .profile-body {
+                font-size: 20px;
+            }
+
+            .card1 ul {
+                display: flex;
+                padding: 0;
+                margin: 0;
+                justify-content: space-around;
+                width: 150px;
+                margin: 0 auto;
+                font-size: 25px;
+            }
+
+            .card1 ul a {
+                color: white;
+                opacity: 0.5;
+            }
+
+            .card1 ul a:focus,
+            .card1 ul a:hover {
+                opacity: 1;
+            }
+
+            header {
+                position: fixed;
+                display: flex;
+                top: 0;
+                left: 0;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                transition: 0.6s;
+                padding: 40px 100px;
+                z-index: 2;
+            }
+
+            .logo {
+                position: relative;
+                font-weight: 700px;
+                text-decoration: none;
+                color: white;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                transition: 0.6s;
+                font-size: 40px;
+                margin-left: 50px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+
+            header ul {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+            }
+
+            header ul li {
+                position: relative;
+                list-style: none;
+
+            }
+
+            header ul li a {
+                text-decoration: none;
+                position: relative;
+                color: white;
+                margin: 0 15px;
+                letter-spacing: 2px;
+                font-weight: 500px;
+                font-size: 25px;
+                transition: 0.6s;
+            }
+
+            header ul li a:hover {
+                color: black;
+            }
+
+            .bg {
+                background-image: url("background.jpg");
+                background-size: cover;
+                position: relative;
+                width: 100%;
+                height: 100vh;
+            }
+
+            header.sticky {
+                padding: 5px 100px;
+                background-color: white;
+            }
+
+            header.sticky ul li a {
+                color: black;
+            }
+
+            header.sticky ul li a:hover {
+                color: lightgray;
+            }
+
+            header.sticky .logo {
+                color: black;
+            }
+
+            .card {
+                margin-top: 60px;
+            }
+
+            .welcome {
+                min-height: 100vh;
+                font-family: Oswald;
+                background: #08071d;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: url("bg.png") no-repeat center center/cover;
+                margin-top: -200px;
+            }
+
+            div.welcome form {
+                width: 670px;
+                height: 400px;
+                display: flex;
+                justify-content: center;
+                box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+                border-radius: 15px;
+                background: rgba(255,255,255,0.1);
+                backdrop-filter: blur(10px);
+                flex-wrap: wrap;
+                font-size: 100px;
+            }
+
+            .welcome form input {
+                font-size: 50px;
+            }
+
+            .welcome form h1 {
+                color: #fff;
+                font-weight: 500;
+                margin-top: 20px;
+                width: 500px;
+                text-align: center;
+            }
+
+            .welcome form input {
+                width: 290px;
+                height: 40px;
+                padding-left: 10px;
+                outline: none;
+                border: none;
+                font-size: 20px;
+                margin-bottom: 10px;
+                background: none;
+                border-bottom: 2px solid #fff;
+            }
+
+            .welcome form input::placeholder {
+                color: #ddd;
+            }
+
+            .welcome form #ln,
+            .welcome form #mobile {
+                margin-left: 20px;
+            }
+
+            .welcome form h4 {
+                color: #fff;
+                font-weight: 300;
+                width: 600px;
+                margin-top: 20px;
+            }
+
+            .welcome form textarea {
+                background: none;
+                border: none;
+                border-bottom: 2px solid #fff;
+                color: #fff;
+                font-weight: 200;
+                font-size: 15px;
+                padding: 10px;
+                outline: none;
+                min-width: 600px;
+                max-width: 600px;
+                min-height: 80px;
+                max-height: 80px;
+            }
+
+            textarea::-webkit-scrollbar {
+                width: 1em;
+            }
+
+            textarea::-webkit-scrollbar-thumb {
+                background-color: rgba(194,194,194,0.713);
+            }
+
+            .welcome form #button {
+                border: none;
+                background: #fff;
+                border-radius: 5px;
+                margin-top: 20px;
+                font-weight: 600;
+                font-size: 20px;
+                color: #333;
+                width: 100px;
+                padding: 0;
+                margin-right: 500px;
+                margin-bottom: 30px;
+                transition: 0.3s;
+            }
+
+            .welcome form #button:hover {
+                opacity: 0.7;
+            }
+
+            .con1 img {
+                width: 200px;
+                height: 200px;
+                border-radius: 200px;
+                border: 3px solid white;
+            }
+
+            p.para1 {
+                font-size: 30px;
+            }
+
+            div.body1 {
+                width: 100%;
+                height: auto;
+                background-color: rgb(53, 53, 53);
+            }
+
+            div.body2 {
+                width: 100%;
+                background: #333;
+            }
+
+            div.container {
+                background-image: url("veg2.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                padding: 100px 40px;
+                text-align: center;
+                color: white;
+            }
+
+            .container p {
+                margin: 40px auto;
+                font-size: 30px;
+            }
+
+            .email-box {
+                height: 40px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .email-box i {
+                background: #2f3542;
+                width: 40px;
+                line-height: 40px;
+            }
+
+            .mail,
+            .sub {
+                outline: none;
+                border: none;
+                font-size: 20px;
+            }
+
+            .mail {
+                width: 0;
+                transition: 0.6s;
+
+            }
+
+            .email-box:hover > .mail,
+            .mail:focus {
+                width: 300px;
+                padding: 0 15px;
+            }
+
+            .sub {
+                background: #2f3542;
+                color: white;
+                padding: 0 15px;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+
+            div.footer {
+                width: 100%;
+                height: 200px;
+                background-color: rgb(53, 53, 53);
+                border: 3px solid white;
+            }
+
+            button.start {
+                width: 250px;
+                height: 70px;
+                font-size: 30px;
+                background-color: rgba(255, 255, 255, 0);
+                border: 3px solid white;
+                color: white;
+                cursor: pointer;
+                transition: 0.6s;
+            }
+
+            button.start:hover {
+                background-color: rgba(0, 0, 0, 0.301);
+            }
+
+            .start a {
+                text-decoration: none;
+                color: white;
+            }
+
+            .start a:hover {
+                color: blue;
+            }
+
+            div.about {
+                width: 40%;
+                display: inline-block;
+                margin-left: 150px;
+                padding: 25px;
+            }
+
+            div.image {
+                width: 700px;
+                height: 500px;
+                margin-left: 150px;
+                display: inline-block;
+                background-image: url("fit.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            button.lm {
+                color: #E34234;
+                background-color: rgb(53, 53, 53);
+                border: none;
+                cursor: pointer;
+                font-size: 30px;
+                transition: 0.6s;
+            }
+
+            button.lm:hover {
+                color: #973127;
+            }
+
+            div.plan {
+                margin: 0 auto;
+            }
+
+            div.box1 {
+                margin-bottom: 100px;
+            }
+            div.box2 {
+                border: 3px solid white;
+                padding: 25px;
+                width: 85%;
+                margin-left: 150px;
+            }
+
+            div.line {
+                border: 1px solid black;
+            }
+
+            div.ref {
+                border: 1px solid grey;
+                height: 200px;
+                overflow: scroll;
+                border-radius: 30px;
+            }
+
+            div.box3 {
+                display: flex;
+                margin: 0 auto;
+                border: 1px solid white;
+                width: 250px;
+                justify-content: space-between;
+            }
+
+            div.box3 > div {
+                padding: 10px;
+                cursor: pointer;
+                transition: 0.6s;
+            }
+
+            div.box3 > div:hover {
+                scale: 130%;
+            }
+
+            div.box4 {
+                border: 1px solid white;
+                display: flex;
+                text-align: center;
+                width: 40%;
+                margin: 0 auto;
+                color: white;
+            }
+
+            div.l1 {
+                margin: 0 auto;
+            }
+
+            div.three {
+                width: 90%;
+                margin: 0 auto;
+                display: flex;
+                padding: 20px;
+                justify-content: space-between;
+                position: relative;
+            }
+
+            div.three > div {
+                width: 520px;
+                height: 300px;
+                box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgb(0, 0, 0);
+            }
+
+            div.wl {
+                position: relative;
+                background-image: url("wl.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                cursor: pointer;
+                background-blend-mode: darken;
+                background-color: transparent;
+            }
+
+            div.wg {
+                position: relative;
+                background-image: url("wg.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                cursor: pointer;
+                background-blend-mode: darken;
+                background-color: transparent;
+            }
+
+            div.bd {
+                position: relative;
+                background-image: url("bd.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                cursor: pointer;
+                background-blend-mode: darken;
+                background-color: transparent;
+            }
+
+            div.wl h3 {
+                color: white;
+                font-size: 30px;
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                left: 40%;
+                opacity: 0;
+            }
+
+            div.wg h3 {
+                color: white;
+                font-size: 30px;
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                left: 40%;
+                opacity: 0;
+            }
+
+            div.bd h3 {
+                color: white;
+                font-size: 30px;
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                left: 40%;
+                opacity: 0;
+            }
+
+            div.wl:hover {
+                background-blend-mode: darken;
+                background-color: hsla(218, 14%, 11%, 0.6);
+            }
+
+            div.wg:hover {
+                background-blend-mode: darken;
+                background-color: hsla(218, 14%, 11%, 0.6);
+            }
+
+            div.bd:hover {
+                background-blend-mode: darken;
+                background-color: hsla(218, 14%, 11%, 0.6);
+            }
+
+            div.wl:hover h3 {
+                bottom: 40%;
+                opacity: 1;
+            }
+
+            div.wg:hover h3 {
+                bottom: 40%;
+                opacity: 1;
+            }
+
+            div.bd:hover h3 {
+                bottom: 40%;
+                opacity: 1;
+            }
+
+            div.text1 {
+                width: 78%;
+                margin: 0 auto;
+                display: flex;
+                padding: 0 20px 20px;
+                justify-content: space-between;
+                text-align: center;
+                color: white;
+            }
+
+            div.text1 h3 {
+                cursor: pointer;
+            }
+
+            div.text1 h3:hover {
+                color: darkgray;
+            }
+
+            div.fv {
+                position: relative;
+                background-image: url("veg.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                cursor: pointer;
+                background-blend-mode: darken;
+                background-color: transparent;
+            }
+
+            div.meat {
+                position: relative;
+                background-image: url("meat.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                cursor: pointer;
+                background-blend-mode: darken;
+                background-color: transparent;
+            }
+
+            div.carb {
+                position: relative;
+                background-image: url("carb.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                cursor: pointer;
+                background-blend-mode: darken;
+                background-color: transparent;
+            }
+
+            div.fv h3 {
+                color: white;
+                font-size: 30px;
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                left: 30%;
+                opacity: 0;
+            }
+
+            div.meat h3 {
+                color: white;
+                font-size: 30px;
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                left: 45%;
+                opacity: 0;
+            }
+
+            div.carb h3 {
+                color: white;
+                font-size: 30px;
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                left: 40%;
+                opacity: 0;
+            }
+
+            div.fv:hover {
+                background-blend-mode: darken;
+                background-color: hsla(218, 14%, 11%, 0.6);
+            }
+
+            div.meat:hover {
+                background-blend-mode: darken;
+                background-color: hsla(218, 14%, 11%, 0.6);
+            }
+
+            div.carb:hover {
+                background-blend-mode: darken;
+                background-color: hsla(218, 14%, 11%, 0.6);
+            }
+
+            div.fv:hover h3 {
+                bottom: 40%;
+                opacity: 1;
+            }
+
+            div.meat:hover h3 {
+                bottom: 40%;
+                opacity: 1;
+            }
+
+            div.carb:hover h3 {
+                bottom: 40%;
+                opacity: 1;
+            }
+
+            .foot {
+                
+                width: 120px;
+                text-decoration: none;
+            }
+
+            .foot1 {
+                background-color: rgb(53, 53, 53);
+                padding: 70px 0;
+            }
+
+            .container1 {
+                max-width: 1170px;
+                margin: auto;
+                background-color: rgb(53, 53, 53);
+            }
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            .footer-col {
+                width: 25%;
+                padding: 0 15px;
+            }
+
+            .footer-col h4 {
+                font-size: 25px;
+                color: white;
+                margin-bottom: 30px;
+                font-weight: 500;
+                position: relative;
+
+            }
+
+            .footer-col h4::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                background-color: #e91e63;
+                height: 2px;
+                box-sizing: border-box;
+                width: 50px;
+            }
+
+            .footer-col ul li:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            .footer-col ul li a {
+                font-size: 20px;
+                color: #ffffff;
+                text-decoration: none;
+                font-weight: 300;
+                color: #bbbbbb;
+                display: block;
+                transition: all 0.3s ease;
+            }
+
+            .footer-col ul li a:hover {
+                color: #ffffff;
+                padding-left: 8px;
+            }
+
+            .footer-col .socials a {
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                background-color: rgba(255,255,255,0.2);
+                margin: 0 10px 10px 0;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 50%;
+                color: #ffffff;
+                transition: all 0.5s ease;
+            }
+
+            .footer-col .socials a:hover {
+                color: #24262b;
+                background-color: #ffffff;
+            }
+
+            div.cc {
+                width: 33%;
+                padding: 0 15px;
+                margin-top: 60px;
+                color: rgba(255, 255, 255, 0.685);
+                text-decoration: none;
+            }
+
+            div.cc a {
+                text-decoration: none;
+                color: rgba(255, 255, 255, 0.685);
+            }
+
+            div.cc a:hover {
+                color: rgb(111, 50, 190);
+                text-decoration: underline;
+
+            }
+
+            table tr td {
+                width: 20%;
+                color: white;
+                border: 2px solid white;
+                padding: 20px 0;
+            }
+
+            table th {
+                width: 50%;
+                color: white;
+                font-size: 30px;
+                padding: 20px 0;
+            }
+
+            table td img {
+                width: 100px;
+                height: 100px;
+                cursor: pointer;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            table h5 a {
+                color: darkgray;
+                margin-bottom: 200px;
+            }
+
+            @media (min-width: 600px) {
+                .card1 {
+                    flex-direction: row;
+                }
+
+                .profile1 {
+                    text-align: left;
+                    margin: 2em;
+                }
+
+                .profile-name::after {
+                    margin-left: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header id="head">
+            <a href="C:/Users/Dragon/Documents/CSS/PBL/Index/home.html" class="logo">Fitness</a>
+            <ul>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#ab">About</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </header>
+        <script>
+            window.addEventListener("scroll", function () {
+                var header = document.querySelector("header");
+                header
+                    .classList
+                    .toggle("sticky", window.scrollY > 0);
+            })
+        </script>
+        <div class="con1" id="container">
+            <h1 style="color: white; font-size: 50px; margin-top: 200px; margin-bottom: 0; text-decoration: underline;">THE PEACOCKS</h1>
+            <div class="card1">
+                <div class="bar1">
+                    <img src="Pyae.jpg" alt="">
+                    <ul class="socials">
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-telegram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="profile1">
+                    <h2 class="profile-name">Pyae Khin Khin</h2>
+                    <p class="profile-position">Designer</p>
+                    <p class="profile-body">Advises themes, designs and searches for various images.
+                        Responsible for picking and deciding web layout.</p>
+                </div>
+            </div>
+            <div class="card card1">
+                <div class="bar1">
+                    <img src="PTN.jpg" alt="">
+                    <ul class="socials">
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-telegram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="profile1">
+                    <h2 class="profile-name">Phyoe Thet Naing</h2>
+                    <p class="profile-position">Programmer</p>
+                    <p class="profile-body">Does most of the coding and web features. Main provider for HTML, CSS and JavaScript.</p>
+                </div>
+            </div>
+            <div class="card card1">
+                <div class="bar1">
+                    <img src="lich.jpg" alt="">
+                    <ul class="socials">
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-telegram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="profile1">
+                    <h2 class="profile-name">Hein Khant Zaw</h2>
+                    <p class="profile-position">Fitness Instructor</p>
+                    <p class="profile-body">Finds information about fitness plans, nutrition and diets. Main advisor for workout tips and details.</p>
+                </div>
+            </div>
+            <div class="card card1" style="margin-bottom: 150px;">
+                <div class="bar1">
+                    <img src="BLK.png" alt="">
+                    <ul class="socials">
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-telegram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="profile1">
+                    <h2 class="profile-name">Bhone Lwin Khant</h2>
+                    <p class="profile-position">Advisor</p>
+                    <p class="profile-body">Finds information on calories in food and advises various designs. Suggests HTML and CSS ideas.</p>
+                </div>
+            </div>
+        </div>
+        <footer class="foot1">
+            <div class="container1">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Fitness Plans</h4>
+                        <ul>
+                            <li>
+                                <a href="#">Weight Loss</a>
+                            </li>
+                            <li>
+                                <a href="#">Weight Gain</a>
+                            </li>
+                            <li>
+                                <a href="#">Bodybuilding</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Diet and Nutrition</h4>
+                        <ul>
+                            <li>
+                                <a href="">Fruits and Vegetables</a>
+                            </li>
+                            <li>
+                                <a href="">Meat</a>
+                            </li>
+                            <li>
+                                <a href="">Carbohydrates</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Team</h4>
+                        <ul>
+                            <li>
+                                <a href="">About Us</a>
+                            </li>
+                            <li>
+                                <a href="">Contact</a>
+                            </li>
+                            <li>
+                                <a href="">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="">Terms of Use</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow Us</h4>
+                        <div class="socials">
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-telegram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container1">
+                <div class="row">
+                    <div class="cc">
+                        <ul>
+                            <li>
+                                <a href="#">© Copyright 2022-2023 by Fitness.Inc.</a>
+                                All rights reserved.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
